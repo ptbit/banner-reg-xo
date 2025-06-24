@@ -5,7 +5,7 @@ $font-favbet-bold: FavbetDisplay-Bold, sans-serif
   -webkit-tap-highlight-color: transparent
   overscroll-behavior: none
   width: 100% // prod
-  // width: 50%
+  width: 50%
   height: 100%
   img
     max-width: 100%
@@ -23,43 +23,122 @@ $font-favbet-bold: FavbetDisplay-Bold, sans-serif
     background: url("../img/bg-640.jpg") no-repeat 50% 50%/cover
   @media screen and (max-width: 1260px)
     background: url("../img/bg-512.jpg") no-repeat 50% 50%/cover
-  &::before
-    content: ''
-    position: absolute
-    height: 80%
-    top: -21%
-    left: 0
-    right: 0
-    opacity: 0.9
-    background: linear-gradient(0deg, rgba(9, 4, 44, 0.00) 0%, #09042C 100%)
   &::after
     content: ''
     position: absolute
-    bottom: -9%
+    bottom:0
     left: 0
     right: 0
-    height: 27%
-    background: linear-gradient(180deg, rgba(9, 4, 44, 0.00) 0%, #09042C 100%)
-    opacity: 0.9
-  &__main
+    height: 100px
+    background: linear-gradient(180deg, rgba(9, 4, 44, 0.00) 0%, #09042C 60.05%)
+    opacity: 1
+  
+  &__logo
+    margin: 32px auto 0
+    height: 65px
+    width: 365px
+    text-align: center
+  &__lt
     position: absolute
-    bottom: -5px
-    left: 49%
+    left: 0
+    top: 0
+    width: 184px
+  &__lb
+    position: absolute
+    bottom: 61px
+    left: 0
+    width: 169px
+  &__rt
+    position: absolute
+    right: 0
+    top: 0
+    width: 172px
+  &__main
+    padding-top: 170px
+    position: absolute
+    bottom: -93px
+    width: 1275px
+    aspect-ratio: 1275/1085
+    left: 50%
     transform: translateX(-50%)
-    height: 796px
-    aspect-ratio: 1006/796
+    background: url("../img/main-960.png") no-repeat 50% 50%/cover
+    @media screen and (max-width: 1440px)
+      background: url("../img/main-720.png") no-repeat 50% 50%/cover
+    @media screen and (max-width: 1280px)
+      background: url("../img/main-640.png") no-repeat 50% 50%/cover
+    @media screen and (max-width: 1260px)
+      background: url("../img/main-512.png") no-repeat 50% 50%/cover
+  &__text
+    border: 1px dashed red
+    width: 555px
+    // height: 668px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-family: $font-favbet-bold
+  &__title
+    border: 1px dashed red
+    color: #FFF
+    text-align: center
+    // font-family: $font-favbet-bold
+    font-size: 118px
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+    letter-spacing: 1.18px
+    margin: 0
+  &__plus
+    width: 72px
+    min-height: 72px
+    border: 1px dashed red  
+    margin-top: 6px
+    margin-bottom: 14px
+    // margin: auto
+    background: url("../img/plus.svg") no-repeat 50% 50%/cover
+  &__bit
+    color: #E92377
+    text-align: center
+    // font-family: "Favbet Display"
+    font-size: 60px
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+    letter-spacing: 0.6px
+  &__fs
+    margin-top: -20px
+    margin-bottom: -15px
+    color: #FFF
+    text-align: center
+    // font-family: "Favbet Display"
+    font-size: 163px
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+    letter-spacing: 1.63px
+
+  &__balance
+    color: #E92377
+    text-align: center
+    // font-family: "Favbet Display"
+    font-size: 47px
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+    letter-spacing: 0.47px
+  
   &__footer
     position: absolute
     z-index: 2
-    opacity: 0.6
+    opacity: 0.7
     width: 100%
     padding: 0 16px
-    bottom: 13px
+    bottom: 20px
     color: #E3E3E3
     text-align: center
-    text-shadow: 0px 0.79px 0px rgba(0, 0, 0, 0.25)
+    text-shadow: 0px 0.88px 0px rgba(0, 0, 0, 0.25)
     font-family: $font-suisse-intl-reg
-    font-size: 11px
+    font-size: 18px
     font-style: normal
     font-weight: 400
     line-height: normal
