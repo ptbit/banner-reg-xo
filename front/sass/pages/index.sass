@@ -1,0 +1,71 @@
+$font-suisse-intl-reg: SuisseIntl-Regular, sans-serif
+$font-favbet-bold: FavbetDisplay-Bold, sans-serif
+
+.wrapper
+  -webkit-tap-highlight-color: transparent
+  overscroll-behavior: none
+  width: 100% // prod
+  // width: 50%
+  height: 100%
+  img
+    max-width: 100%
+    height: auto
+.reg
+  position: relative
+  height: calc(var(--vh, 1vh) * 100)
+  width: 100%
+  overflow: hidden
+
+  background: url("../img/bg-960.jpg") no-repeat 50% 50%/cover
+  @media screen and (max-width: 1440px)
+    background: url("../img/bg-720.jpg") no-repeat 50% 50%/cover
+  @media screen and (max-width: 1280px)
+    background: url("../img/bg-640.jpg") no-repeat 50% 50%/cover
+  @media screen and (max-width: 1260px)
+    background: url("../img/bg-512.jpg") no-repeat 50% 50%/cover
+  &::before
+    content: ''
+    position: absolute
+    height: 80%
+    top: -21%
+    left: 0
+    right: 0
+    opacity: 0.9
+    background: linear-gradient(0deg, rgba(9, 4, 44, 0.00) 0%, #09042C 100%)
+  &::after
+    content: ''
+    position: absolute
+    bottom: -9%
+    left: 0
+    right: 0
+    height: 27%
+    background: linear-gradient(180deg, rgba(9, 4, 44, 0.00) 0%, #09042C 100%)
+    opacity: 0.9
+  &__main
+    position: absolute
+    bottom: -5px
+    left: 49%
+    transform: translateX(-50%)
+    height: 796px
+    aspect-ratio: 1006/796
+  &__footer
+    position: absolute
+    z-index: 2
+    opacity: 0.6
+    width: 100%
+    padding: 0 16px
+    bottom: 13px
+    color: #E3E3E3
+    text-align: center
+    text-shadow: 0px 0.79px 0px rgba(0, 0, 0, 0.25)
+    font-family: $font-suisse-intl-reg
+    font-size: 11px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+
+@media screen and (max-width: 1023px)
+  .wrapper
+    display: none
+  .Layout_column__3MM83
+    width: 100%
