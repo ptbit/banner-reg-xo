@@ -1,5 +1,6 @@
 $font-suisse-intl-reg: SuisseIntl-Regular, sans-serif
 $font-favbet-bold: FavbetDisplay-Bold, sans-serif
+$font-favbet-med: FavbetDisplay-Medium, sans-serif
 
 .wrapper
   -webkit-tap-highlight-color: transparent
@@ -32,21 +33,22 @@ $font-favbet-bold: FavbetDisplay-Bold, sans-serif
     transform-origin: top
     img
       width: 100%
-  &__lt
-    position: absolute
-    left: 0
-    top: 0
-    width: 184px
-  &__lb
-    position: absolute
-    bottom: 61px
-    left: 0
-    width: 169px
-  &__rt
-    position: absolute
-    right: 0
-    top: 0
-    width: 172px
+  &__decorations
+    &-lt
+      position: absolute
+      left: 0
+      top: 0
+      width: 184px
+    &-lb
+      position: absolute
+      bottom: 61px
+      left: 0
+      width: 169px
+    &-rt
+      position: absolute
+      right: 0
+      top: 0
+      width: 172px
   &__main
     margin: 0 auto
     padding-top: 170px
@@ -64,53 +66,54 @@ $font-favbet-bold: FavbetDisplay-Bold, sans-serif
       background: url("../img/main-640.png") no-repeat 50% 50%/cover
     @media screen and (max-width: 1024px)
       background: url("../img/main-512.png") no-repeat 50% 50%/cover
-
-  &__text
-    width: 555px
-    margin: 0 auto
-    display: flex
-    flex-direction: column
-    align-items: center
-    font-family: $font-favbet-bold
-    font-style: normal
-    font-weight: 700
-    line-height: normal
-    color: #FFF
-  &__title
-    margin: 0
-    text-align: center
-    font-size: 118px
-    letter-spacing: 1.18px
-  &__plus
-    width: 72px
-    min-height: 72px
-    margin-top: 6px
-    margin-bottom: 14px
-    background: url("../img/plus.svg") no-repeat 50% 50%/cover
-  &__bit
-    color: #E92377
-    font-size: 60px
-    letter-spacing: 0.6px
-  &__fs
-    margin-top: -20px
-    margin-bottom: -15px
-    font-size: 163px
-    letter-spacing: 1.63px
-    position: relative
-    &::after
-      content: '*'
-      position: absolute
-      top: 22px
-      right: -25px
-      color: #FFF
-      text-align: center
+  
+    &-info
+      width: 555px
+      margin: 0 auto
+      display: flex
+      flex-direction: column
+      align-items: center
       font-family: $font-favbet-bold
-      font-size: 50px
-  &__balance
-    color: #E92377
-    text-align: center
-    font-size: 47px
-    letter-spacing: 0.47px
+      font-style: normal
+      font-weight: 700
+      line-height: normal
+      color: #FFF
+    &-title
+      margin: 0
+      text-align: center
+      font-size: 118px
+      letter-spacing: 1.18px
+    &-plus
+      width: 72px
+      min-height: 72px
+      margin-top: 6px
+      margin-bottom: 14px
+      background: url("../img/plus.svg") no-repeat 50% 50%/cover
+    &-bit
+      color: #E92377
+      font-size: 60px
+      letter-spacing: 0.6px
+    &-fs
+      margin-top: -20px
+      margin-bottom: -15px
+      font-size: 163px
+      letter-spacing: 1.63px
+      position: relative
+      &::after
+        content: '*'
+        position: absolute
+        top: 22px
+        right: -25px
+        color: #FFF
+        text-align: center
+        font-family: $font-favbet-med
+        font-size: 50px
+        font-weight: 500
+    &-balance
+      color: #E92377
+      text-align: center
+      font-size: 47px
+      letter-spacing: 0.47px
 
   &__footer
     position: absolute
