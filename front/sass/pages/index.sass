@@ -23,21 +23,15 @@ $font-favbet-bold: FavbetDisplay-Bold, sans-serif
     background: url("../img/bg-640.jpg") no-repeat 50% 50%/cover
   @media screen and (max-width: 1260px)
     background: url("../img/bg-512.jpg") no-repeat 50% 50%/cover
-  &::after
-    content: ''
-    position: absolute
-    bottom:0
-    left: 0
-    right: 0
-    height: 100px
-    background: linear-gradient(180deg, rgba(9, 4, 44, 0.00) 0%, #09042C 60.05%)
-    opacity: 1
+
   
   &__logo
     margin: 32px auto 0
-    height: 65px
     width: 365px
     text-align: center
+    transform-origin: top
+    img
+      width: 100%
   &__lt
     position: absolute
     left: 0
@@ -54,6 +48,7 @@ $font-favbet-bold: FavbetDisplay-Bold, sans-serif
     top: 0
     width: 172px
   &__main
+    margin: 0 auto
     padding-top: 170px
     position: absolute
     bottom: -93px
@@ -61,72 +56,62 @@ $font-favbet-bold: FavbetDisplay-Bold, sans-serif
     aspect-ratio: 1275/1085
     left: 50%
     transform: translateX(-50%)
+    transform-origin: bottom
     background: url("../img/main-960.png") no-repeat 50% 50%/cover
     @media screen and (max-width: 1440px)
       background: url("../img/main-720.png") no-repeat 50% 50%/cover
     @media screen and (max-width: 1280px)
       background: url("../img/main-640.png") no-repeat 50% 50%/cover
-    @media screen and (max-width: 1260px)
+    @media screen and (max-width: 1024px)
       background: url("../img/main-512.png") no-repeat 50% 50%/cover
+
   &__text
-    border: 1px dashed red
     width: 555px
-    // height: 668px
     margin: 0 auto
     display: flex
     flex-direction: column
     align-items: center
     font-family: $font-favbet-bold
-  &__title
-    border: 1px dashed red
-    color: #FFF
-    text-align: center
-    // font-family: $font-favbet-bold
-    font-size: 118px
     font-style: normal
     font-weight: 700
     line-height: normal
-    letter-spacing: 1.18px
+    color: #FFF
+  &__title
     margin: 0
+    text-align: center
+    font-size: 118px
+    letter-spacing: 1.18px
   &__plus
     width: 72px
     min-height: 72px
-    border: 1px dashed red  
     margin-top: 6px
     margin-bottom: 14px
-    // margin: auto
     background: url("../img/plus.svg") no-repeat 50% 50%/cover
   &__bit
     color: #E92377
-    text-align: center
-    // font-family: "Favbet Display"
     font-size: 60px
-    font-style: normal
-    font-weight: 700
-    line-height: normal
     letter-spacing: 0.6px
   &__fs
     margin-top: -20px
     margin-bottom: -15px
-    color: #FFF
-    text-align: center
-    // font-family: "Favbet Display"
     font-size: 163px
-    font-style: normal
-    font-weight: 700
-    line-height: normal
     letter-spacing: 1.63px
-
+    position: relative
+    &::after
+      content: '*'
+      position: absolute
+      top: 22px
+      right: -25px
+      color: #FFF
+      text-align: center
+      font-family: $font-favbet-bold
+      font-size: 50px
   &__balance
     color: #E92377
     text-align: center
-    // font-family: "Favbet Display"
     font-size: 47px
-    font-style: normal
-    font-weight: 700
-    line-height: normal
     letter-spacing: 0.47px
-  
+
   &__footer
     position: absolute
     z-index: 2
@@ -139,10 +124,31 @@ $font-favbet-bold: FavbetDisplay-Bold, sans-serif
     text-shadow: 0px 0.88px 0px rgba(0, 0, 0, 0.25)
     font-family: $font-suisse-intl-reg
     font-size: 18px
-    font-style: normal
     font-weight: 400
-    line-height: normal
-
+  &__shadow
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 13%
+    background: linear-gradient(180deg, rgba(9, 4, 44, 0.00) 0%, #09042C 60.05%)
+    &::before
+      content: ''
+      position: absolute
+      left: 45px
+      bottom: 15px
+      width: 140px
+      height: 140px
+      transform: rotate(-30deg)
+      background: url("../img/footer-l.png") no-repeat 50% 50%/contain
+    &::after
+      content: ''
+      position: absolute
+      bottom: -13px
+      right: 16px
+      width: 175px
+      height: 175px
+      background: url("../img/footer-r.png") no-repeat 50% 50%/contain
 @media screen and (max-width: 1023px)
   .wrapper
     display: none
